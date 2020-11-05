@@ -2,23 +2,45 @@
 //
 
 #include <iostream>
-#include <vector>
+#include <cmath>
+#include "Point.h"
 using namespace std;
 
+
+
+
 int main()
-{	
-	vector<int> tb(3);
-	
-   cout << "Hello World!\n";
+{
+    Point A, B;
+    double resultat;
+    cout << " Point A " << endl;
+    A.saisir();
+    cout << " Point B " << endl;
+    B.saisir();
+    double estimation = 0;
+    cout << "Estimation des distances "; cin >> estimation;
 
+
+    resultat = A.calcul(B);
+    if (resultat == estimation) {
+        cout << "Ton estimation est bonne";
+    }
+    else {
+        cout << "Ton estimation est fausse";
+    }
+    cout << "Le resultat était de " << resultat << " pour les point "<< endl;
+    cout << " le point A :";
+    A.affichage();
+    cout << " le point B :";
+    B.affichage();
+
+
+    return 0;
 }
 
-void remplir(vector<int> const& tb) {
 
-	for (int i = 0; i < sizeof(vector<int> tb); i++) {
 
-	}
-}
+
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
 // Déboguer le programme : F5 ou menu Déboguer > Démarrer le débogage
